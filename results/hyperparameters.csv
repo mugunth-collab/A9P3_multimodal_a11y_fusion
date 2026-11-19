@@ -1,0 +1,13 @@
+param,value
+lr,0.003
+wd,0.0001
+batch,512.0
+epochs,30.0
+patience,5.0
+lam_aux,0.3
+p_drop,0.15
+val_frac,0.1
+H_enc,16.0
+H_fusion,32.0
+folds,5.0
+seed,2026.0

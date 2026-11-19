@@ -1,0 +1,249 @@
+method,epoch,train_loss,val_loss
+Visual-only NN,1,0.65172,0.56228
+Visual-only NN,2,0.56773,0.53589
+Visual-only NN,3,0.54103,0.50437
+Visual-only NN,4,0.51745,0.48481
+Visual-only NN,5,0.508,0.48208
+Visual-only NN,6,0.50398,0.4795
+Visual-only NN,7,0.50265,0.47911
+Visual-only NN,8,0.50256,0.47858
+Visual-only NN,9,0.50116,0.47798
+Visual-only NN,10,0.50032,0.47814
+Visual-only NN,11,0.50034,0.47692
+Visual-only NN,12,0.4992,0.47717
+Visual-only NN,13,0.49875,0.47642
+Visual-only NN,14,0.49781,0.47636
+Visual-only NN,15,0.49785,0.47668
+Visual-only NN,16,0.49723,0.47612
+Visual-only NN,17,0.49694,0.47758
+Visual-only NN,18,0.49708,0.47719
+Visual-only NN,19,0.49618,0.4768
+Visual-only NN,20,0.49595,0.47692
+Visual-only NN,21,0.49603,0.47692
+Text-only NN,1,0.67424,0.54444
+Text-only NN,2,0.47536,0.41544
+Text-only NN,3,0.42998,0.40215
+Text-only NN,4,0.41915,0.39945
+Text-only NN,5,0.41755,0.39852
+Text-only NN,6,0.41507,0.39682
+Text-only NN,7,0.41413,0.394
+Text-only NN,8,0.41264,0.39407
+Text-only NN,9,0.41203,0.39395
+Text-only NN,10,0.41202,0.39282
+Text-only NN,11,0.41164,0.392
+Text-only NN,12,0.40998,0.39147
+Text-only NN,13,0.4097,0.39088
+Text-only NN,14,0.40881,0.39048
+Text-only NN,15,0.40879,0.39058
+Text-only NN,16,0.40827,0.39002
+Text-only NN,17,0.40805,0.38961
+Text-only NN,18,0.40818,0.39001
+Text-only NN,19,0.40781,0.38871
+Text-only NN,20,0.40784,0.38831
+Text-only NN,21,0.4075,0.38857
+Text-only NN,22,0.40721,0.38848
+Text-only NN,23,0.4074,0.38836
+Text-only NN,24,0.40696,0.38852
+Text-only NN,25,0.40664,0.38974
+Context-only NN,1,0.63563,0.56555
+Context-only NN,2,0.57223,0.55246
+Context-only NN,3,0.55954,0.54789
+Context-only NN,4,0.55505,0.54399
+Context-only NN,5,0.55342,0.54288
+Context-only NN,6,0.55078,0.54152
+Context-only NN,7,0.54898,0.54231
+Context-only NN,8,0.548,0.54067
+Context-only NN,9,0.54702,0.54177
+Context-only NN,10,0.54581,0.53903
+Context-only NN,11,0.54482,0.53925
+Context-only NN,12,0.54394,0.54172
+Context-only NN,13,0.54356,0.53978
+Context-only NN,14,0.54201,0.54034
+Context-only NN,15,0.54142,0.5409
+Proposed MLF,1,0.79172,0.44405
+Proposed MLF,2,0.5989,0.3641
+Proposed MLF,3,0.54068,0.32806
+Proposed MLF,4,0.51145,0.32198
+Proposed MLF,5,0.49975,0.31203
+Proposed MLF,6,0.48842,0.30424
+Proposed MLF,7,0.48269,0.29984
+Proposed MLF,8,0.47789,0.29688
+Proposed MLF,9,0.47184,0.2902
+Proposed MLF,10,0.46981,0.29098
+Proposed MLF,11,0.46496,0.28549
+Proposed MLF,12,0.45878,0.28282
+Proposed MLF,13,0.45483,0.28118
+Proposed MLF,14,0.44929,0.28109
+Proposed MLF,15,0.45112,0.27894
+Proposed MLF,16,0.44573,0.28062
+Proposed MLF,17,0.4457,0.27963
+Proposed MLF,18,0.44159,0.28185
+Proposed MLF,19,0.44428,0.28343
+Proposed MLF,20,0.43871,0.28016
+w/o aux loss,1,0.58508,0.43378
+w/o aux loss,2,0.42188,0.35899
+w/o aux loss,3,0.37827,0.32608
+w/o aux loss,4,0.35428,0.31979
+w/o aux loss,5,0.34341,0.30994
+w/o aux loss,6,0.3332,0.30157
+w/o aux loss,7,0.32731,0.29687
+w/o aux loss,8,0.32216,0.2937
+w/o aux loss,9,0.31691,0.28753
+w/o aux loss,10,0.31465,0.28884
+w/o aux loss,11,0.31136,0.28358
+w/o aux loss,12,0.30486,0.28162
+w/o aux loss,13,0.30225,0.28053
+w/o aux loss,14,0.2988,0.28279
+w/o aux loss,15,0.29932,0.28144
+w/o aux loss,16,0.29581,0.28224
+w/o aux loss,17,0.29433,0.28078
+w/o aux loss,18,0.29309,0.28423
+w/o modality dropout,1,0.78716,0.44097
+w/o modality dropout,2,0.58772,0.36344
+w/o modality dropout,3,0.52395,0.32834
+w/o modality dropout,4,0.49406,0.3163
+w/o modality dropout,5,0.48017,0.31004
+w/o modality dropout,6,0.46876,0.30326
+w/o modality dropout,7,0.46257,0.29722
+w/o modality dropout,8,0.45708,0.29612
+w/o modality dropout,9,0.45328,0.29232
+w/o modality dropout,10,0.4499,0.29084
+w/o modality dropout,11,0.4431,0.28768
+w/o modality dropout,12,0.43731,0.28374
+w/o modality dropout,13,0.43349,0.283
+w/o modality dropout,14,0.42806,0.27985
+w/o modality dropout,15,0.42745,0.27912
+w/o modality dropout,16,0.42483,0.28003
+w/o modality dropout,17,0.42032,0.27786
+w/o modality dropout,18,0.41753,0.28248
+w/o modality dropout,19,0.41948,0.28381
+w/o modality dropout,20,0.41511,0.28129
+w/o modality dropout,21,0.41137,0.27591
+w/o modality dropout,22,0.40907,0.28042
+w/o modality dropout,23,0.40866,0.28106
+w/o modality dropout,24,0.40922,0.28105
+w/o modality dropout,25,0.40421,0.27868
+w/o modality dropout,26,0.40329,0.28044
+Additive late fusion,1,0.60048,0.47542
+Additive late fusion,2,0.44893,0.37417
+Additive late fusion,3,0.39328,0.34835
+Additive late fusion,4,0.37137,0.32958
+Additive late fusion,5,0.35647,0.32137
+Additive late fusion,6,0.34754,0.31649
+Additive late fusion,7,0.34108,0.3162
+Additive late fusion,8,0.34148,0.31358
+Additive late fusion,9,0.33563,0.30934
+Additive late fusion,10,0.33417,0.31031
+Additive late fusion,11,0.33323,0.3091
+Additive late fusion,12,0.32646,0.30627
+Additive late fusion,13,0.32485,0.30675
+Additive late fusion,14,0.32276,0.30408
+Additive late fusion,15,0.32362,0.30344
+Additive late fusion,16,0.3179,0.30125
+Additive late fusion,17,0.31699,0.30264
+Additive late fusion,18,0.31743,0.2999
+Additive late fusion,19,0.31384,0.30232
+Additive late fusion,20,0.31253,0.30022
+Additive late fusion,21,0.31395,0.29865
+Additive late fusion,22,0.31297,0.30215
+Additive late fusion,23,0.31004,0.29946
+Additive late fusion,24,0.30949,0.29823
+Additive late fusion,25,0.30814,0.30171
+Additive late fusion,26,0.30741,0.30255
+Additive late fusion,27,0.3053,0.29833
+Additive late fusion,28,0.30442,0.29935
+Additive late fusion,29,0.30527,0.29924
+Early-fusion MLP,1,0.54652,0.40402
+Early-fusion MLP,2,0.39036,0.34354
+Early-fusion MLP,3,0.3521,0.31932
+Early-fusion MLP,4,0.33288,0.31039
+Early-fusion MLP,5,0.32182,0.30267
+Early-fusion MLP,6,0.31011,0.2988
+Early-fusion MLP,7,0.30186,0.29755
+Early-fusion MLP,8,0.2938,0.29615
+Early-fusion MLP,9,0.29014,0.29706
+Early-fusion MLP,10,0.28369,0.29425
+Early-fusion MLP,11,0.27634,0.29754
+Early-fusion MLP,12,0.27185,0.30093
+Early-fusion MLP,13,0.26809,0.29996
+Early-fusion MLP,14,0.26309,0.2979
+Early-fusion MLP,15,0.26227,0.29412
+Early-fusion MLP,16,0.25865,0.30364
+Early-fusion MLP,17,0.25369,0.29494
+Early-fusion MLP,18,0.25214,0.29814
+Early-fusion MLP,19,0.25019,0.30022
+Early-fusion MLP,20,0.2424,0.3067
+MLF w/o context (V+T),1,0.78616,0.45952
+MLF w/o context (V+T),2,0.61769,0.40076
+MLF w/o context (V+T),3,0.57539,0.37806
+MLF w/o context (V+T),4,0.55796,0.36618
+MLF w/o context (V+T),5,0.54431,0.35643
+MLF w/o context (V+T),6,0.539,0.35538
+MLF w/o context (V+T),7,0.5338,0.35273
+MLF w/o context (V+T),8,0.53069,0.35228
+MLF w/o context (V+T),9,0.52977,0.35015
+MLF w/o context (V+T),10,0.52759,0.34968
+MLF w/o context (V+T),11,0.52515,0.35029
+MLF w/o context (V+T),12,0.52698,0.34879
+MLF w/o context (V+T),13,0.52486,0.3465
+MLF w/o context (V+T),14,0.52016,0.34638
+MLF w/o context (V+T),15,0.52361,0.34879
+MLF w/o context (V+T),16,0.52383,0.34272
+MLF w/o context (V+T),17,0.52065,0.34319
+MLF w/o context (V+T),18,0.52048,0.34362
+MLF w/o context (V+T),19,0.51874,0.34252
+MLF w/o context (V+T),20,0.51576,0.34266
+MLF w/o context (V+T),21,0.51595,0.34024
+MLF w/o context (V+T),22,0.51949,0.3464
+MLF w/o context (V+T),23,0.51563,0.34018
+MLF w/o context (V+T),24,0.51551,0.33756
+MLF w/o context (V+T),25,0.51291,0.34078
+MLF w/o context (V+T),26,0.51036,0.3448
+MLF w/o context (V+T),27,0.51408,0.33831
+MLF w/o context (V+T),28,0.50807,0.33777
+MLF w/o context (V+T),29,0.50776,0.3396
+MLF w/o text (V+C),1,0.80715,0.55447
+MLF w/o text (V+C),2,0.73289,0.51637
+MLF w/o text (V+C),3,0.69343,0.47916
+MLF w/o text (V+C),4,0.66318,0.46209
+MLF w/o text (V+C),5,0.65353,0.45682
+MLF w/o text (V+C),6,0.65128,0.45364
+MLF w/o text (V+C),7,0.6427,0.45327
+MLF w/o text (V+C),8,0.64355,0.45106
+MLF w/o text (V+C),9,0.63782,0.44748
+MLF w/o text (V+C),10,0.63523,0.44683
+MLF w/o text (V+C),11,0.63228,0.44424
+MLF w/o text (V+C),12,0.62331,0.44021
+MLF w/o text (V+C),13,0.62529,0.44339
+MLF w/o text (V+C),14,0.6215,0.43823
+MLF w/o text (V+C),15,0.62035,0.44151
+MLF w/o text (V+C),16,0.61797,0.43976
+MLF w/o text (V+C),17,0.61925,0.44179
+MLF w/o text (V+C),18,0.61491,0.43883
+MLF w/o text (V+C),19,0.61691,0.4392
+MLF w/o visual (T+C),1,0.8132,0.47328
+MLF w/o visual (T+C),2,0.61025,0.38416
+MLF w/o visual (T+C),3,0.55822,0.36565
+MLF w/o visual (T+C),4,0.53989,0.36104
+MLF w/o visual (T+C),5,0.53191,0.35706
+MLF w/o visual (T+C),6,0.52922,0.35439
+MLF w/o visual (T+C),7,0.52383,0.34991
+MLF w/o visual (T+C),8,0.52361,0.3478
+MLF w/o visual (T+C),9,0.51787,0.34266
+MLF w/o visual (T+C),10,0.51286,0.34052
+MLF w/o visual (T+C),11,0.50762,0.33945
+MLF w/o visual (T+C),12,0.50363,0.33298
+MLF w/o visual (T+C),13,0.504,0.33294
+MLF w/o visual (T+C),14,0.50267,0.33226
+MLF w/o visual (T+C),15,0.50313,0.33872
+MLF w/o visual (T+C),16,0.49819,0.32958
+MLF w/o visual (T+C),17,0.49883,0.32711
+MLF w/o visual (T+C),18,0.4963,0.32698
+MLF w/o visual (T+C),19,0.49424,0.32874
+MLF w/o visual (T+C),20,0.48763,0.32687
+MLF w/o visual (T+C),21,0.49151,0.32607
+MLF w/o visual (T+C),22,0.48984,0.33015
+MLF w/o visual (T+C),23,0.48756,0.33007
+MLF w/o visual (T+C),24,0.48561,0.32698
+MLF w/o visual (T+C),25,0.48697,0.32798
+MLF w/o visual (T+C),26,0.48562,0.32811

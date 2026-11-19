@@ -1,0 +1,9 @@
+item,value
+rows,15000
+screens,1200
+barrier_rate,0.2800000011920929
+n_features,"{""V"": 16, ""T"": 5, ""C"": 27}"
+missing_pct,"{""ambient_lux"": 1.0999999999999999, ""ocr_confidence"": 1.34, ""caption_confidence"": 1.2066666666666666}"
+per_app_barrier,"{""city_311_reports"": 0.2473, ""ev_charger_finder"": 0.2486, ""parking_payment"": 0.3527, ""public_wifi_portal"": 0.3556, ""transit_tracker"": 0.2399, ""waste_pickup"": 0.243}"
+per_type_barrier,"{""button"": 0.0954, ""chart"": 0.5083, ""icon"": 0.5106, ""image"": 0.3635, ""image_button"": 0.3692, ""link"": 0.1143, ""map_marker"": 0.4974, ""qr_scanner"": 0.1355, ""text_field"": 0.1612, ""toggle"": 0.0918}"
+unlabelled_pct,35.36

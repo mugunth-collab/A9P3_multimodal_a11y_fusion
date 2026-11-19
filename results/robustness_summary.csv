@@ -1,0 +1,9 @@
+model,masked,AUC_mean,AUC_std,F1_mean,F1_std
+Proposed MLF,C,0.8724,0.0069,0.7186,0.0166
+Proposed MLF,T,0.8007,0.0039,0.5615,0.0277
+Proposed MLF,V,0.9004,0.0076,0.7034,0.0261
+Proposed MLF,none,0.9297,0.0035,0.7555,0.0077
+w/o modality dropout,C,0.8667,0.013,0.6578,0.0922
+w/o modality dropout,T,0.7917,0.007,0.5165,0.1004
+w/o modality dropout,V,0.902,0.0059,0.7209,0.0169
+w/o modality dropout,none,0.9286,0.0038,0.7537,0.0123

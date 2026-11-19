@@ -1,0 +1,542 @@
+{
+ "dataset": {
+  "rows": 15000,
+  "screens": 1200,
+  "barrier_rate": 0.2800000011920929,
+  "n_features": {
+   "V": 16,
+   "T": 5,
+   "C": 27
+  },
+  "missing_pct": {
+   "ambient_lux": 1.0999999999999999,
+   "ocr_confidence": 1.34,
+   "caption_confidence": 1.2066666666666666
+  },
+  "per_app_barrier": {
+   "city_311_reports": 0.2473,
+   "ev_charger_finder": 0.2486,
+   "parking_payment": 0.3527,
+   "public_wifi_portal": 0.3556,
+   "transit_tracker": 0.2399,
+   "waste_pickup": 0.243
+  },
+  "per_type_barrier": {
+   "button": 0.0954,
+   "chart": 0.5083,
+   "icon": 0.5106,
+   "image": 0.3635,
+   "image_button": 0.3692,
+   "link": 0.1143,
+   "map_marker": 0.4974,
+   "qr_scanner": 0.1355,
+   "text_field": 0.1612,
+   "toggle": 0.0918
+  },
+  "unlabelled_pct": 35.36
+ },
+ "hyperparameters": {
+  "lr": 0.003,
+  "wd": 0.0001,
+  "batch": 512,
+  "epochs": 30,
+  "patience": 5,
+  "lam_aux": 0.3,
+  "p_drop": 0.15,
+  "val_frac": 0.1,
+  "H_enc": 16,
+  "H_fusion": 32,
+  "folds": 5,
+  "seed": 2026
+ },
+ "summary": {
+  "Additive late fusion": {
+   "F1_mean": 0.7521216766844022,
+   "F1_std": 0.010509570493317305,
+   "Precision_mean": 0.7374191074791259,
+   "Precision_std": 0.025042228792706962,
+   "Recall_mean": 0.7690732870872337,
+   "Recall_std": 0.03392103060888252,
+   "AUC_mean": 0.9188143301969586,
+   "AUC_std": 0.006123007475268859,
+   "PRAUC_mean": 0.8308937380588592,
+   "PRAUC_std": 0.01210364448054956
+  },
+  "Context-only NN": {
+   "F1_mean": 0.4914254712774035,
+   "F1_std": 0.008053959227268452,
+   "Precision_mean": 0.37539536444225263,
+   "Precision_std": 0.011545640974940225,
+   "Recall_mean": 0.7128954281211405,
+   "Recall_std": 0.030600331944828717,
+   "AUC_mean": 0.668136157830886,
+   "AUC_std": 0.008106484904586249,
+   "PRAUC_mean": 0.4694517994621257,
+   "PRAUC_std": 0.01692334322887384
+  },
+  "Early-fusion MLP": {
+   "F1_mean": 0.7489503053859139,
+   "F1_std": 0.008820530553412654,
+   "Precision_mean": 0.7433140825371194,
+   "Precision_std": 0.05398585984049937,
+   "Recall_mean": 0.760765040081569,
+   "Recall_std": 0.05360834652623032,
+   "AUC_mean": 0.9193954381887256,
+   "AUC_std": 0.006072649161899636,
+   "PRAUC_mean": 0.8416817386687259,
+   "PRAUC_std": 0.015017938069505306
+  },
+  "LightGBM (ref.)": {
+   "F1_mean": 0.7702798086479985,
+   "F1_std": 0.00697798169563866,
+   "Precision_mean": 0.7896389423886399,
+   "Precision_std": 0.02805060402219048,
+   "Recall_mean": 0.7531048013319049,
+   "Recall_std": 0.024623615375398866,
+   "AUC_mean": 0.9357237940648255,
+   "AUC_std": 0.00399437331651353,
+   "PRAUC_mean": 0.866370056987973,
+   "PRAUC_std": 0.012241805149359753
+  },
+  "MLF w/o context (V+T)": {
+   "F1_mean": 0.719730136709565,
+   "F1_std": 0.013217046015375714,
+   "Precision_mean": 0.7238661651907243,
+   "Precision_std": 0.051650345962165695,
+   "Recall_mean": 0.7205195737990476,
+   "Recall_std": 0.04657043195381969,
+   "AUC_mean": 0.8758437556416621,
+   "AUC_std": 0.008121885203618909,
+   "PRAUC_mean": 0.7982970333179565,
+   "PRAUC_std": 0.018025380635690983
+  },
+  "MLF w/o text (V+C)": {
+   "F1_mean": 0.6110987113601374,
+   "F1_std": 0.004367952264917343,
+   "Precision_mean": 0.5160758727170262,
+   "Precision_std": 0.012138527344183534,
+   "Recall_mean": 0.750273067975734,
+   "Recall_std": 0.028433177894234163,
+   "AUC_mean": 0.8104369319157291,
+   "AUC_std": 0.005778917778421083,
+   "PRAUC_mean": 0.6069869509193643,
+   "PRAUC_std": 0.009207499501521103
+  },
+  "MLF w/o visual (T+C)": {
+   "F1_mean": 0.7340849306783778,
+   "F1_std": 0.009694181622109737,
+   "Precision_mean": 0.6646176943938313,
+   "Precision_std": 0.011143481750700002,
+   "Recall_mean": 0.8200049580170947,
+   "Recall_std": 0.016616477046379866,
+   "AUC_mean": 0.9056811042487558,
+   "AUC_std": 0.005759992666966849,
+   "PRAUC_mean": 0.773013948807472,
+   "PRAUC_std": 0.011400264398347907
+  },
+  "Proposed MLF": {
+   "F1_mean": 0.7554715248491809,
+   "F1_std": 0.007746505911520459,
+   "Precision_mean": 0.7702239120600611,
+   "Precision_std": 0.04720424109578472,
+   "Recall_mean": 0.7449610252996222,
+   "Recall_std": 0.039417592045985245,
+   "AUC_mean": 0.9297155307140044,
+   "AUC_std": 0.0034862064879310063,
+   "PRAUC_mean": 0.8539303606640433,
+   "PRAUC_std": 0.009432979796216023
+  },
+  "Rule-based checker": {
+   "F1_mean": 0.4656509561445067,
+   "F1_std": 0.0015760459205149636,
+   "Precision_mean": 0.3067674550362862,
+   "Precision_std": 0.0010312945702030767,
+   "Recall_mean": 0.9659493054197779,
+   "Recall_std": 0.00512421419713106,
+   "AUC_mean": 0.5585269637576668,
+   "AUC_std": 0.002747022276951031,
+   "PRAUC_mean": 0.3058573520371923,
+   "PRAUC_std": 0.0010665401062430048
+  },
+  "Text-only NN": {
+   "F1_mean": 0.7185980499010327,
+   "F1_std": 0.014492502487127832,
+   "Precision_mean": 0.6764161075942111,
+   "Precision_std": 0.014426808969406733,
+   "Recall_mean": 0.7664139262917102,
+   "Recall_std": 0.015148966234497546,
+   "AUC_mean": 0.842738277119137,
+   "AUC_std": 0.010270288373385277,
+   "PRAUC_mean": 0.663672422473141,
+   "PRAUC_std": 0.019785925232466917
+  },
+  "Visual-only NN": {
+   "F1_mean": 0.5826655439964907,
+   "F1_std": 0.01280181088802527,
+   "Precision_mean": 0.5001811057869181,
+   "Precision_std": 0.026465219374288244,
+   "Recall_mean": 0.70383119257951,
+   "Recall_std": 0.06328187424136067,
+   "AUC_mean": 0.7630847172164211,
+   "AUC_std": 0.009220921008862862,
+   "PRAUC_mean": 0.5137623995621448,
+   "PRAUC_std": 0.009623703223266321
+  },
+  "w/o aux loss": {
+   "F1_mean": 0.7524756191973163,
+   "F1_std": 0.008818202038472656,
+   "Precision_mean": 0.7562734071980002,
+   "Precision_std": 0.035352249428956574,
+   "Recall_mean": 0.7512221687190864,
+   "Recall_std": 0.03630917117373288,
+   "AUC_mean": 0.9277493792170114,
+   "AUC_std": 0.005459582027181684,
+   "PRAUC_mean": 0.8489437929979344,
+   "PRAUC_std": 0.012735921309540073
+  },
+  "w/o modality dropout": {
+   "F1_mean": 0.753720902770403,
+   "F1_std": 0.01228646048238968,
+   "Precision_mean": 0.7911937782104522,
+   "Precision_std": 0.048104257664643185,
+   "Recall_mean": 0.7241328021441472,
+   "Recall_std": 0.04993828035005226,
+   "AUC_mean": 0.9286293396294774,
+   "AUC_std": 0.00378246404271956,
+   "PRAUC_mean": 0.8523519547458825,
+   "PRAUC_std": 0.008966296473085795
+  }
+ },
+ "paired_ttests": [
+  {
+   "method": "Rule-based checker",
+   "metric": "F1",
+   "mean_diff": 0.28982056870467415,
+   "t": 102.31801114113347,
+   "p": 5.4709958128363646e-08
+  },
+  {
+   "method": "Rule-based checker",
+   "metric": "AUC",
+   "mean_diff": 0.3711885669563376,
+   "t": 380.4984508403808,
+   "p": 2.862329858250801e-10
+  },
+  {
+   "method": "LightGBM (ref.)",
+   "metric": "F1",
+   "mean_diff": -0.014808283798817535,
+   "t": -3.7302432699038643,
+   "p": 0.020292578390128827
+  },
+  {
+   "method": "LightGBM (ref.)",
+   "metric": "AUC",
+   "mean_diff": -0.00600826335082123,
+   "t": -4.246002566105442,
+   "p": 0.01320011552778027
+  },
+  {
+   "method": "Visual-only NN",
+   "metric": "F1",
+   "mean_diff": 0.17280598085269025,
+   "t": 37.07528194677223,
+   "p": 3.1601668518506523e-06
+  },
+  {
+   "method": "Visual-only NN",
+   "metric": "AUC",
+   "mean_diff": 0.1666308134975832,
+   "t": 47.524092619925895,
+   "p": 1.1727759987547625e-06
+  },
+  {
+   "method": "Text-only NN",
+   "metric": "F1",
+   "mean_diff": 0.03687347494814817,
+   "t": 6.795780245316559,
+   "p": 0.002448865461606451
+  },
+  {
+   "method": "Text-only NN",
+   "metric": "AUC",
+   "mean_diff": 0.08697725359486734,
+   "t": 23.540398373343198,
+   "p": 1.9305864559792656e-05
+  },
+  {
+   "method": "Context-only NN",
+   "metric": "F1",
+   "mean_diff": 0.2640460535717774,
+   "t": 56.52286613729296,
+   "p": 5.866091697945643e-07
+  },
+  {
+   "method": "Context-only NN",
+   "metric": "AUC",
+   "mean_diff": 0.26157937288311844,
+   "t": 80.25702489369726,
+   "p": 1.4446733482454206e-07
+  },
+  {
+   "method": "w/o aux loss",
+   "metric": "F1",
+   "mean_diff": 0.00299590565186465,
+   "t": 2.7361441436958622,
+   "p": 0.05211199533918221
+  },
+  {
+   "method": "w/o aux loss",
+   "metric": "AUC",
+   "mean_diff": 0.001966151496992863,
+   "t": 1.540583500819683,
+   "p": 0.19826574235403635
+  },
+  {
+   "method": "w/o modality dropout",
+   "metric": "F1",
+   "mean_diff": 0.0017506220787779636,
+   "t": 0.4321393718452338,
+   "p": 0.6879161213023645
+  },
+  {
+   "method": "w/o modality dropout",
+   "metric": "AUC",
+   "mean_diff": 0.001086191084526944,
+   "t": 2.3834930589906134,
+   "p": 0.0757011640844249
+  },
+  {
+   "method": "Additive late fusion",
+   "metric": "F1",
+   "mean_diff": 0.0033498481647787014,
+   "t": 0.9133811689617185,
+   "p": 0.4127159897139268
+  },
+  {
+   "method": "Additive late fusion",
+   "metric": "AUC",
+   "mean_diff": 0.010901200517045706,
+   "t": 5.422039762792785,
+   "p": 0.005609413426988738
+  },
+  {
+   "method": "Early-fusion MLP",
+   "metric": "F1",
+   "mean_diff": 0.006521219463267025,
+   "t": 3.3314310803122775,
+   "p": 0.029066850134312
+  },
+  {
+   "method": "Early-fusion MLP",
+   "metric": "AUC",
+   "mean_diff": 0.010320092525278657,
+   "t": 6.15502880158965,
+   "p": 0.00353529068482399
+  },
+  {
+   "method": "MLF w/o context (V+T)",
+   "metric": "F1",
+   "mean_diff": 0.035741388139615915,
+   "t": 13.062503613328825,
+   "p": 0.00019827361046298578
+  },
+  {
+   "method": "MLF w/o context (V+T)",
+   "metric": "AUC",
+   "mean_diff": 0.05387177507234224,
+   "t": 17.520471174704134,
+   "p": 6.231528271739207e-05
+  },
+  {
+   "method": "MLF w/o text (V+C)",
+   "metric": "F1",
+   "mean_diff": 0.14437281348904357,
+   "t": 73.41410345510182,
+   "p": 2.062985834045959e-07
+  },
+  {
+   "method": "MLF w/o text (V+C)",
+   "metric": "AUC",
+   "mean_diff": 0.11927859879827525,
+   "t": 100.97728162901623,
+   "p": 5.7673014369839375e-08
+  },
+  {
+   "method": "MLF w/o visual (T+C)",
+   "metric": "F1",
+   "mean_diff": 0.021386594170803196,
+   "t": 6.410944575910904,
+   "p": 0.003041643876315896
+  },
+  {
+   "method": "MLF w/o visual (T+C)",
+   "metric": "AUC",
+   "mean_diff": 0.024034426465248514,
+   "t": 13.022332996933477,
+   "p": 0.00020068406281240474
+  }
+ ],
+ "robustness": {
+  "Proposed MLF|C": {
+   "AUC_mean": 0.8724071044551651,
+   "AUC_std": 0.00692954403721142,
+   "F1_mean": 0.7186498175364346,
+   "F1_std": 0.01662044840060511
+  },
+  "Proposed MLF|T": {
+   "AUC_mean": 0.8007307050062659,
+   "AUC_std": 0.0038846941903903347,
+   "F1_mean": 0.5615025115034114,
+   "F1_std": 0.027741896116584345
+  },
+  "Proposed MLF|V": {
+   "AUC_mean": 0.9003950192593824,
+   "AUC_std": 0.0075937983230286495,
+   "F1_mean": 0.7034373736580034,
+   "F1_std": 0.0261474231769934
+  },
+  "Proposed MLF|none": {
+   "AUC_mean": 0.9297155307140044,
+   "AUC_std": 0.0034862064879310063,
+   "F1_mean": 0.7554715248491809,
+   "F1_std": 0.007746505911520459
+  },
+  "w/o modality dropout|C": {
+   "AUC_mean": 0.8667267679403835,
+   "AUC_std": 0.013009293015926498,
+   "F1_mean": 0.657821487057862,
+   "F1_std": 0.09221534799878571
+  },
+  "w/o modality dropout|T": {
+   "AUC_mean": 0.7917452834443923,
+   "AUC_std": 0.006957142496490761,
+   "F1_mean": 0.5165448992187012,
+   "F1_std": 0.10040958802883113
+  },
+  "w/o modality dropout|V": {
+   "AUC_mean": 0.902001961852984,
+   "AUC_std": 0.005887988445612183,
+   "F1_mean": 0.7209163070355186,
+   "F1_std": 0.016876600168468953
+  },
+  "w/o modality dropout|none": {
+   "AUC_mean": 0.9286293396294774,
+   "AUC_std": 0.00378246404271956,
+   "F1_mean": 0.753720902770403,
+   "F1_std": 0.01228646048238968
+  }
+ },
+ "subgroup_recall": [
+  {
+   "subgroup": "Unlabelled small icon",
+   "n": 1349,
+   "n_pos": 1270,
+   "barrier_rate": 0.9414380788803101,
+   "Rule-based checker": 1.0,
+   "Visual-only NN": 0.9960629921259843,
+   "Text-only NN": 0.9984251968503937,
+   "Additive late fusion": 0.9984251968503937,
+   "Proposed MLF": 0.9929133858267717
+  },
+  {
+   "subgroup": "Unlabelled, no text",
+   "n": 571,
+   "n_pos": 512,
+   "barrier_rate": 0.8966724872589111,
+   "Rule-based checker": 1.0,
+   "Visual-only NN": 0.9375,
+   "Text-only NN": 1.0,
+   "Additive late fusion": 0.978515625,
+   "Proposed MLF": 0.947265625
+  },
+  {
+   "subgroup": "Vague label (q<0.35)",
+   "n": 490,
+   "n_pos": 273,
+   "barrier_rate": 0.5571428537368774,
+   "Rule-based checker": 0.8717948717948718,
+   "Visual-only NN": 0.336996336996337,
+   "Text-only NN": 0.7545787545787546,
+   "Additive late fusion": 0.4945054945054945,
+   "Proposed MLF": 0.5128205128205128
+  },
+  {
+   "subgroup": "Live map/chart",
+   "n": 1900,
+   "n_pos": 1087,
+   "barrier_rate": 0.5721052885055542,
+   "Rule-based checker": 0.9724011039558418,
+   "Visual-only NN": 0.985280588776449,
+   "Text-only NN": 0.8730450781968722,
+   "Additive late fusion": 0.9264029438822448,
+   "Proposed MLF": 0.9411223551057958
+  },
+  {
+   "subgroup": "Focus break, deep tree",
+   "n": 903,
+   "n_pos": 584,
+   "barrier_rate": 0.6467331051826477,
+   "Rule-based checker": 0.9178082191780822,
+   "Visual-only NN": 0.5154109589041096,
+   "Text-only NN": 0.4674657534246575,
+   "Additive late fusion": 0.791095890410959,
+   "Proposed MLF": 0.7893835616438356
+  },
+  {
+   "subgroup": "Clipped text field",
+   "n": 244,
+   "n_pos": 98,
+   "barrier_rate": 0.40163934230804443,
+   "Rule-based checker": 1.0,
+   "Visual-only NN": 0.1836734693877551,
+   "Text-only NN": 0.14285714285714285,
+   "Additive late fusion": 0.40816326530612246,
+   "Proposed MLF": 0.35714285714285715
+  },
+  {
+   "subgroup": "Android parking/Wi-Fi",
+   "n": 3493,
+   "n_pos": 1376,
+   "barrier_rate": 0.39393073320388794,
+   "Rule-based checker": 0.9433139534883721,
+   "Visual-only NN": 0.59375,
+   "Text-only NN": 0.59375,
+   "Additive late fusion": 0.7049418604651163,
+   "Proposed MLF": 0.6736918604651163
+  }
+ ],
+ "on_device_cost": {
+  "params": 4868,
+  "size_kb_fp32": 19.015625,
+  "latency_ms_median": 0.12380299995129462,
+  "latency_ms_p95": 0.323765499911131
+ },
+ "mean_epochs": {
+  "Additive late fusion": 27.4,
+  "Context-only NN": 14.6,
+  "Early-fusion MLP": 16.0,
+  "MLF w/o context (V+T)": 26.6,
+  "MLF w/o text (V+C)": 19.4,
+  "MLF w/o visual (T+C)": 26.2,
+  "Proposed MLF": 25.8,
+  "Text-only NN": 28.2,
+  "Visual-only NN": 22.8,
+  "w/o aux loss": 24.0,
+  "w/o modality dropout": 25.4
+ },
+ "mean_train_s": {
+  "Additive late fusion": 9.613333177566528,
+  "Context-only NN": 2.392914152145386,
+  "Early-fusion MLP": 3.3607152462005616,
+  "MLF w/o context (V+T)": 9.003494501113892,
+  "MLF w/o text (V+C)": 6.167298173904419,
+  "MLF w/o visual (T+C)": 8.716393041610718,
+  "Proposed MLF": 10.495444440841675,
+  "Text-only NN": 4.120449542999268,
+  "Visual-only NN": 4.823528575897217,
+  "w/o aux loss": 7.709380435943603,
+  "w/o modality dropout": 10.032211542129517
+ },
+ "runtime_s": 411.75207114219666
+}

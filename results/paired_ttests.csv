@@ -1,0 +1,25 @@
+method,metric,mean_diff,t,p
+Rule-based checker,F1,0.28982,102.31801,0.0
+Rule-based checker,AUC,0.37119,380.49845,0.0
+LightGBM (ref.),F1,-0.01481,-3.73024,0.02029
+LightGBM (ref.),AUC,-0.00601,-4.246,0.0132
+Visual-only NN,F1,0.17281,37.07528,0.0
+Visual-only NN,AUC,0.16663,47.52409,0.0
+Text-only NN,F1,0.03687,6.79578,0.00245
+Text-only NN,AUC,0.08698,23.5404,2e-05
+Context-only NN,F1,0.26405,56.52287,0.0
+Context-only NN,AUC,0.26158,80.25702,0.0
+w/o aux loss,F1,0.003,2.73614,0.05211
+w/o aux loss,AUC,0.00197,1.54058,0.19827
+w/o modality dropout,F1,0.00175,0.43214,0.68792
+w/o modality dropout,AUC,0.00109,2.38349,0.0757
+Additive late fusion,F1,0.00335,0.91338,0.41272
+Additive late fusion,AUC,0.0109,5.42204,0.00561
+Early-fusion MLP,F1,0.00652,3.33143,0.02907
+Early-fusion MLP,AUC,0.01032,6.15503,0.00354
+MLF w/o context (V+T),F1,0.03574,13.0625,0.0002
+MLF w/o context (V+T),AUC,0.05387,17.52047,6e-05
+MLF w/o text (V+C),F1,0.14437,73.4141,0.0
+MLF w/o text (V+C),AUC,0.11928,100.97728,0.0
+MLF w/o visual (T+C),F1,0.02139,6.41094,0.00304
+MLF w/o visual (T+C),AUC,0.02403,13.02233,0.0002

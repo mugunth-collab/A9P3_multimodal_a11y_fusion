@@ -1,0 +1,9 @@
+numpy>=1.24
+pandas>=2.0
+scipy>=1.10
+scikit-learn>=1.3
+torch>=2.0 (CPU build is sufficient)
+lightgbm>=4.0
+matplotlib>=3.7
+pillow>=9.0
+graphviz (system package providing the `dot` command, for Fig. 1)
